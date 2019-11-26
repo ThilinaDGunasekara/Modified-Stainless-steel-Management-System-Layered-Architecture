@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpCustomer" prefHeight="501.0" prefWidth="98.0" style="-fx-background-color: #829fd9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.akashStainlessSteel.controller.PlaceOrderServiceController">
+   <children>
+      <AnchorPane fx:id="anpLoad" layoutX="99.0" prefHeight="501.0" prefWidth="616.0" style="-fx-background-color: #F2F2F2;">
+         <children>
+            <JFXButton fx:id="btnNewOrder" buttonType="RAISED" layoutX="26.0" layoutY="27.0" onAction="#btnNewOrder_OnAction" prefHeight="35.0" prefWidth="110.0" text="New Order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbJobId" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="141.0" onAction="#cmbCode_OnAction" prefHeight="28.0" prefWidth="280.0" promptText="JOB ID" unFocusColor="#00123b" />
+            <JFXTextField fx:id="txtEstimatedItemPrice" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="241.0" onAction="#EstimatedItemPrice_OnAction" prefHeight="28.0" prefWidth="407.0" promptText="ESTIMATED ITEM PRICE" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtOrderId" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="89.0" onAction="#txtId_OnAction" prefHeight="28.0" prefWidth="280.0" promptText="ORDER ID" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAdditionalPrice" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="292.0" onAction="#txtAdditionalPrice_OnAction" prefHeight="28.0" prefWidth="407.0" promptText="ADDITIONAL PRICE" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFullPayment" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="343.0" onAction="#FullPayment_OnAction" prefHeight="28.0" prefWidth="407.0" promptText="FULL PAYMENT" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="317.0" layoutY="191.0" onAction="#txtName_OnAction" prefHeight="28.0" prefWidth="280.0" promptText="NAME" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="18.0" prefHeight="53.0" prefWidth="197.0" text="Place Order" textAlignment="CENTER" textFill="#00123b">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="317.0" layoutY="110.0" prefHeight="60.0" prefWidth="280.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-99.0" prefHeight="501.0" prefWidth="100.0" style="-fx-background-color: #2A2F35; -fx-border-radius: 5em;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fx:id="imgCustomer" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="86.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0">
+                     <image>
+                        <Image url="@../icon/imgCustomer.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgPlaceOrder" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="364.0" onMouseClicked="#placeOrder_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/imgOrder.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgItem" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="150.0" onMouseClicked="#picManageItems_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/imgItem.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgSearch" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="433.0" onMouseClicked="#picSearch_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/imgViewOrders.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgWorker" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="220.0" onMouseClicked="#picWorker_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/Businessman.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imageHome" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#Home_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/home-icon.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imgJob" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="296.0" onMouseClicked="#picJob_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/looking-for-a-job-620580.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtAdvancePayment" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="395.0" onAction="#AdvancePayment_OnAction" prefHeight="28.0" prefWidth="407.0" promptText="ADVANCE PAYMENT" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtRemainingPayment" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="447.0" onAction="#RemainingPayment_OnAction" prefHeight="28.0" prefWidth="407.0" promptText="REMAINING PAYMENT" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnPlaceOrder" buttonType="RAISED" layoutX="471.0" layoutY="441.0" onAction="#btnPlaceOrder_OnAction" prefHeight="35.0" prefWidth="110.0" stylesheets="@style/manageitemform.css" text="Place Order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateOrder" buttonType="RAISED" layoutX="467.0" layoutY="235.0" onAction="#btnUpdateOrder_OnAction" prefHeight="35.0" prefWidth="118.0" text="Update Order">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="cmbOrderId" focusColor="BLACK" labelFloat="true" layoutX="467.0" layoutY="291.0" onAction="#cmbOrderId_OnAction" prefHeight="28.0" prefWidth="118.0" promptText="ORDER ID" unFocusColor="#00123b" />
+            <JFXTextField fx:id="txtCustomer" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="191.0" onAction="#txtCustomer_OnAction" prefHeight="28.0" prefWidth="280.0" promptText="CUSTOMER ID" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <stylesheets>
+            <URL value="@style/TableView.css" />
+            <URL value="@style/manageitemform.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

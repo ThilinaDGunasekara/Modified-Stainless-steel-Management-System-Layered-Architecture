@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpCustomer" prefHeight="501.0" prefWidth="98.0" style="-fx-background-color: #829fd9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.akashStainlessSteel.controller.EstimationController">
+   <children>
+      <AnchorPane fx:id="anpLoad" prefHeight="501.0" prefWidth="715.0" style="-fx-background-color: #F2F2F2;">
+         <children>
+            <ImageView fx:id="picNewCus_id" fitHeight="73.0" fitWidth="73.0" layoutX="74.0" layoutY="15.0" onMouseClicked="#picNewCus_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/new-icon-png-22.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <JFXTextField fx:id="txtEstimationNo" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="112.0" prefHeight="28.0" prefWidth="268.0" promptText="ESTIMATION NO" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtItemName" focusColor="BLACK" labelFloat="true" layoutX="380.0" layoutY="224.0" prefHeight="28.0" prefWidth="268.0" promptText="ITEM DESCRIPTION" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="tblList" layoutX="69.0" layoutY="333.0" prefHeight="152.0" prefWidth="461.0" stylesheets="@style/TableView.css">
+               <columns>
+                  <TableColumn prefWidth="96.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="ITEM CODE" />
+                  <TableColumn minWidth="0.0" prefWidth="246.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="DESCRIPTION" />
+                  <TableColumn minWidth="0.0" prefWidth="118.0" style="-fx-background-color: #b6b9ba; -fx-alignment: CENTER;" text="QUANTITY" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="571.0" layoutY="363.0" onAction="#btnDelete_OnAction" prefHeight="44.0" prefWidth="79.0" text="Delete" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="571.0" layoutY="282.0" onAction="#btnAdd_OnAction" prefHeight="44.0" prefWidth="79.0" text="Add" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="232.0" layoutY="26.0" prefHeight="44.0" prefWidth="250.0" text="Manage Estimation" textAlignment="CENTER" textFill="#00123b">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbJobId" focusColor="BLACK" labelFloat="true" layoutX="68.0" layoutY="169.0" prefHeight="28.0" prefWidth="268.0" promptText="JOB ID" unFocusColor="#00123b" />
+            <JFXComboBox fx:id="cmbWorkerId" focusColor="BLACK" labelFloat="true" layoutX="380.0" layoutY="112.0" prefHeight="28.0" prefWidth="268.0" promptText="WORKER ID" stylesheets="@style/textBoltAndItalic.css" unFocusColor="#00123b" />
+            <JFXComboBox fx:id="cmbItemCode" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="225.0" prefHeight="28.0" prefWidth="268.0" promptText="ITEM CODE" unFocusColor="#00123b" />
+            <JFXTextArea fx:id="txtAreaDescription" focusColor="BLACK" labelFloat="true" layoutX="379.0" layoutY="158.0" prefHeight="28.0" prefWidth="268.0" promptText="DESCRIPTION" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="571.0" layoutY="442.0" onAction="#btnSave_OnAction" prefHeight="44.0" prefWidth="79.0" text="Save" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <ImageView fx:id="picLogOut" fitHeight="62.0" fitWidth="60.0" layoutX="571.0" layoutY="22.0" onMouseClicked="#picLogOut_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/power-red-with-black-icon-md.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <JFXTextField fx:id="txtQuantity" focusColor="BLACK" labelFloat="true" layoutX="69.0" layoutY="282.0" prefHeight="28.0" prefWidth="268.0" promptText="QUANTITY" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <stylesheets>
+            <URL value="@style/TableView.css" />
+            <URL value="@style/manageitemform.css" />
+         </stylesheets>
+      </AnchorPane>
+   </children>
+</AnchorPane>

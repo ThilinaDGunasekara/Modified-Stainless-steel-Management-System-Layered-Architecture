@@ -1,0 +1,23 @@
+package lk.ijse.dep.akashStainlessSteel.business;
+
+public enum BOTypes {
+    ESTIMATION,
+    ESTIMATION_DETAIL,
+    FNR_CUSTOMER,
+    FNR_ORDER,
+    FR_CUSTOMER,
+    FR_ORDER,
+    ITEM,
+    JOB,
+    JOB_DETAIL,
+    ORDER_DETAIL,
+    WORKER,
+    QUERY_JOB,
+    QUERY_JOB_WHO_NOT_HAVE_ESTIMATION,
+    QUERY_FNR_ORDER,
+    REGISTER,
+    SEARCH_CUSTOMER,
+    SEARCH_ITEM,
+    SEARCH_WORKERS,
+    SEARCH_ORDER;
+}

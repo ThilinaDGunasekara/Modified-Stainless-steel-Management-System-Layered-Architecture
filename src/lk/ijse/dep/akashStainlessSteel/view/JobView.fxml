@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpCustomer" prefHeight="501.0" prefWidth="98.0" style="-fx-background-color: #829fd9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.akashStainlessSteel.controller.JobController">
+   <children>
+      <AnchorPane fx:id="anpLoad" layoutX="100.0" prefHeight="501.0" prefWidth="616.0" style="-fx-background-color: #F2F2F2;" stylesheets="@style/manageitemform.css">
+         <children>
+            <ImageView fx:id="picNewJob" fitHeight="66.0" fitWidth="73.0" layoutX="28.0" layoutY="15.0" onMouseClicked="#picNewCus_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/jobs-icon-png-22.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton fx:id="btnItemReport" buttonType="RAISED" layoutX="205.0" layoutY="448.0" onAction="#btnItemReport_OnAction" prefHeight="44.0" prefWidth="106.0" text="Item Report" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <JFXTextField fx:id="txtJobId" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="111.0" prefHeight="28.0" prefWidth="268.0" promptText="JOB ID" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="218.0" prefHeight="28.0" prefWidth="268.0" promptText="NAME" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnDelete_Id" buttonType="RAISED" layoutX="519.0" layoutY="359.0" onAction="#btnDelete_OnAction" prefHeight="44.0" prefWidth="79.0" text="Delete" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="519.0" layoutY="281.0" onAction="#btnSave_OnAction" prefHeight="44.0" prefWidth="79.0" text="Save" textFill="#000000cf">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor></JFXButton>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="214.0" layoutY="21.0" prefHeight="53.0" prefWidth="188.0" text="Manage Job" textAlignment="CENTER" textFill="#00123b">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="txtDescription" focusColor="BLACK" labelFloat="true" layoutX="300.0" layoutY="110.0" prefHeight="135.0" prefWidth="302.0" promptText="DESCRIPTION" unFocusColor="#00123b">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </JFXTextArea>
+            <JFXComboBox fx:id="cmbCustomerId" focusColor="BLACK" labelFloat="true" layoutX="20.0" layoutY="168.0" onAction="#cmbCustomerId_OnAction" prefHeight="28.0" prefWidth="268.0" promptText="CUSTOMER ID" unFocusColor="#00123b" />
+            <TableView fx:id="tblList" layoutX="14.0" layoutY="263.0" prefHeight="173.0" prefWidth="488.0" stylesheets="@style/manageitemform.css">
+               <columns>
+                  <TableColumn prefWidth="87.0" style="-fx-alignment: CENTER;" text="JOB ID" />
+                  <TableColumn prefWidth="97.0" style="-fx-alignment: CENTER;" text="CUS. ID" />
+                  <TableColumn prefWidth="152.0" style="-fx-alignment: CENTER;" text="NAME" />
+                  <TableColumn prefWidth="151.0" style="-fx-alignment: CENTER;" text="DESCRIPTION" />
+               </columns>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="17.97" radius="10.065" width="24.29" />
+               </effect>
+            </TableView>
+         </children>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" prefHeight="501.0" prefWidth="100.0" style="-fx-background-color: #2A2F35; -fx-border-radius: 5em;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fx:id="imgCustomer" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="86.0" onMouseClicked="#manageCustomer_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0">
+               <image>
+                  <Image url="@../icon/imgCustomer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgPlaceOrder" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="364.0" onMouseClicked="#placeOrder_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/imgOrder.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgItem" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="150.0" onMouseClicked="#picManageItems_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/imgItem.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgSearch" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="433.0" onMouseClicked="#picSearch_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/imgViewOrders.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgWorker" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="220.0" onMouseClicked="#picWorker_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Businessman.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imageHome" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#Home_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/home-icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgJob" fitHeight="60.0" fitWidth="60.0" layoutX="20.0" layoutY="296.0" onMouseClicked="#picJob_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/looking-for-a-job-620580.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

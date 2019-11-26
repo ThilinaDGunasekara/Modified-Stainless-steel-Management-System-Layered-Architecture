@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anpLoad" prefHeight="501.0" prefWidth="715.0" style="-fx-background-color: #2A2F35;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.akashStainlessSteel.controller.OrderMainController">
+   <children>
+      <ImageView fx:id="imgItemOrder" fitHeight="212.0" fitWidth="201.0" layoutX="100.0" layoutY="127.0" onMouseClicked="#ItemOrder_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/kisspng-shopping-cart-computer-icons-clip-art-place-order-5b3d5c67ce02a4.8878256015307480078438.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgServicesOrder" fitHeight="201.0" fitWidth="201.0" layoutX="413.0" layoutY="127.0" onMouseClicked="#ServiceOrder_OnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/imgItem.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lbl" layoutX="196.0" layoutY="32.0" text="Select Order Type" textFill="#829fd9">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="386.0" prefHeight="41.0" prefWidth="462.0" textFill="#829fd9">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" contentDisplay="CENTER" layoutX="132.0" layoutY="443.0" prefHeight="26.0" prefWidth="462.0" text="Please select one of above main operations to proceed" textFill="#829fd9">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

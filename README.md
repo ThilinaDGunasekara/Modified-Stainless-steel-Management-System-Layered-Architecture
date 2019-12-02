@@ -12,7 +12,7 @@ This application is simple POS(Point Of Sales) system who can use to sore,
 And also this application was developed by using layered architecture and java SE.
 
 ##Requirements
-#####Before use this application you must need to install JAVA runtime environment and MYSQL database management services..
+Before use this application you must need to install JAVA runtime environment and MYSQL database management services..
 links :  
     [JAVA](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ,
     [MySQL](https://www.mysql.com/)

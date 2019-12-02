@@ -225,14 +225,13 @@ public class WorkerController {
 
         int maxId =0;
         try {
-            String lastWorkerId = workerBO.getLastWorkerId();
+            String lastItemCode = workerBO.getLastWorkerId();
 
-            if(lastWorkerId==null){
+            if(lastItemCode==null){
                 maxId=0;
 
-
             }else {
-                maxId = parseInt(lastWorkerId.replace("W", ""));
+                maxId = parseInt(lastItemCode.replace("W", ""));
             }
 
             maxId = maxId + 1;
@@ -255,7 +254,6 @@ public class WorkerController {
         }
 
         btnSave.setText("Save");
-        txtId.clear();
         txtSalary.clear();
         txtName.clear();
         txtAddress.clear();

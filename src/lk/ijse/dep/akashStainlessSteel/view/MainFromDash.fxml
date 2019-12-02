@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,7 +20,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="imgOrder" fitHeight="114.0" fitWidth="114.0" layoutX="520.0" layoutY="176.0" onMouseClicked="#placeOrder" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgOrder" fitHeight="114.0" fitWidth="114.0" layoutX="512.0" layoutY="169.0" onMouseClicked="#placeOrder" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/imgOrder.png" />
          </image>
@@ -26,7 +28,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="imgItem" fitHeight="114.0" fitWidth="114.0" layoutX="64.0" layoutY="182.0" onMouseClicked="#picManageItems_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgItem" fitHeight="114.0" fitWidth="114.0" layoutX="78.0" layoutY="170.0" onMouseClicked="#picManageItems_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/imgItem.png" />
          </image>
@@ -52,7 +54,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fx:id="imgWorker" fitHeight="114.0" fitWidth="114.0" layoutX="218.0" layoutY="247.0" onMouseClicked="#picWorker_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgWorker" fitHeight="114.0" fitWidth="114.0" layoutX="214.0" layoutY="226.0" onMouseClicked="#picWorker_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/Businessman.png" />
          </image>
@@ -60,7 +62,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="imgJob" fitHeight="114.0" fitWidth="114.0" layoutX="379.0" layoutY="243.0" onMouseClicked="#picJob_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgJob" fitHeight="114.0" fitWidth="114.0" layoutX="376.0" layoutY="225.0" onMouseClicked="#picJob_OnClick" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/looking-for-a-job-620580.png" />
          </image>
@@ -68,7 +70,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="home" fitHeight="114.0" fitWidth="115.0" layoutX="301.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="home" fitHeight="114.0" fitWidth="115.0" layoutX="301.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../icon/home-icon.png" />
          </image>
@@ -106,5 +108,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXButton>
+      <JFXProgressBar fx:id="progressBar" layoutX="141.0" layoutY="365.0" prefHeight="5.0" prefWidth="434.0" progress="0.24" style="-fx-background-color: 5C73F2;">
+         <effect>
+            <Blend />
+         </effect>
+      </JFXProgressBar>
    </children>
 </AnchorPane>

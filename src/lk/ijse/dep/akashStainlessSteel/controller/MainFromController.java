@@ -1,6 +1,7 @@
 package lk.ijse.dep.akashStainlessSteel.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXProgressBar;
 import javafx.animation.TranslateTransition;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -22,7 +24,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+    
 
 public class MainFromController {
 
@@ -42,9 +44,10 @@ public class MainFromController {
     public JFXButton btnRestore;
     public JFXButton btnBackup;
 
+    public JFXProgressBar progressBar;
 
     public void initialize(){
-
+        this.progressBar.setVisible(false);
     }
 
 
@@ -146,13 +149,14 @@ public class MainFromController {
             commands = new String[]{"mysql", "-h", DBConnection.host, "-u", DBConnection.username,"--port",DBConnection.port,
                     DBConnection.db, "-e", "source " + file.getAbsolutePath()};
 
-            /*Long running task == Restore
-            this.settingsPane.getScene().setCursor(Cursor.WAIT);
-            this.pgb.setVisible(true);
-            lblstatues.setText("Please wait a moment");*/
+
+            this.anpLoad.getScene().setCursor(Cursor.WAIT);
+            this.progressBar.setVisible(true);
+
 
             String[] finalCommands = commands;
-            Task task = new Task<Void>() {
+
+            Task task = new Task<Void>(){
                 @Override
                 protected Void call() throws Exception {
                     Process process = Runtime.getRuntime().exec(finalCommands);
@@ -169,21 +173,17 @@ public class MainFromController {
             };
 
             task.setOnSucceeded(event -> {
-                /*lblstatues.setText("");
-                this.pgb.setVisible(false);
-                this.settingsPane.getScene().setCursor(Cursor.DEFAULT);*/
+                this.progressBar.setVisible(false);
+                this.anpLoad.getScene().setCursor(Cursor.DEFAULT);
                 new Alert(Alert.AlertType.INFORMATION, "Restore process has been successfully done").show();
             });
             task.setOnFailed(event -> {
-                /*lblstatues.setText("");
-                this.pgb.setVisible(false);
-                this.settingsPane.getScene().setCursor(Cursor.DEFAULT);*/
+                this.progressBar.setVisible(false);
+                this.anpLoad.getScene().setCursor(Cursor.DEFAULT);
                 new Alert(Alert.AlertType.ERROR, "Failed to restore the backup. Please contact service team").show();
             } );
-
             new Thread(task).start();
         }
-
     }
 
     public void btnBackup_OnAction(ActionEvent actionEvent) {

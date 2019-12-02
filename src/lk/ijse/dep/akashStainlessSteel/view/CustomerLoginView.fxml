@@ -32,7 +32,7 @@
                   <Font size="37.0" />
                </font>
             </Label>
-            <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="392.0" prefHeight="41.0" prefWidth="508.0" textFill="#fe4545">
+            <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="392.0" prefHeight="41.0" prefWidth="508.0" textFill="#230a59">
                <font>
                   <Font size="22.0" />
                </font>

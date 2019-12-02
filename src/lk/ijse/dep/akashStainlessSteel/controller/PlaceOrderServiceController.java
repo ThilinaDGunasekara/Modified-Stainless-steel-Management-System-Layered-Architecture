@@ -254,6 +254,7 @@ public class PlaceOrderServiceController {
         cmbJobId.setDisable(false);
         reset();
 
+
     }
 
     public void btnPlaceOrder_OnAction(ActionEvent actionEvent) {
@@ -371,7 +372,6 @@ public class PlaceOrderServiceController {
         txtFullPayment.clear();
         txtRemainingPayment.clear();
         cmbOrderId.getSelectionModel().clearSelection();
-        lblDate.setText("");
         cmbJobId.getSelectionModel().clearSelection();
 
     }

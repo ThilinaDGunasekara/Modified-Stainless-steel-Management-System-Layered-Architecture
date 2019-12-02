@@ -15,16 +15,16 @@
 
 <AnchorPane fx:id="anpCustomer" prefHeight="501.0" prefWidth="98.0" style="-fx-background-color: #829fd9;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.akashStainlessSteel.controller.LoginController">
    <children>
-      <AnchorPane fx:id="anpLoad" prefHeight="501.0" prefWidth="715.0" style="-fx-background-color: #829FD9;" stylesheets="@style/manageitemform.css">
+      <AnchorPane fx:id="anpLoad" prefHeight="501.0" prefWidth="715.0" style="-fx-background-color: #2A2F35;" stylesheets="@style/manageitemform.css">
          <children>
             <Label fx:id="lblMenu" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="392.0" prefHeight="41.0" prefWidth="508.0" textFill="#4cb1f7">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="183.0" layoutY="121.0" prefHeight="353.0" prefWidth="350.0" style="-fx-background-color: #3E38F2;" stylesheets="@style/TableView.css">
+            <AnchorPane layoutX="183.0" layoutY="121.0" prefHeight="353.0" prefWidth="350.0" style="-fx-background-color: #07080a;" stylesheets="@style/TableView.css">
                <children>
-                  <JFXTextField fx:id="txtUserName" focusColor="BLACK" labelFloat="true" layoutX="33.0" layoutY="137.0" onAction="#txtUserName_OnAction" prefHeight="28.0" prefWidth="285.0" promptText="USER NAME" unFocusColor="#00123b">
+                  <JFXTextField fx:id="txtUserName" focusColor="#5c73f2" labelFloat="true" layoutX="33.0" layoutY="137.0" onAction="#txtUserName_OnAction" prefHeight="28.0" prefWidth="285.0" promptText="USER NAME" style="-fx-background-color: #ffffff;" unFocusColor="#7baeff">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -32,26 +32,26 @@
                         <ColorAdjust brightness="-0.34" />
                      </effect>
                   </JFXTextField>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="7.0" prefHeight="53.0" prefWidth="241.0" text="Login" textAlignment="CENTER" textFill="#230a59">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="7.0" prefHeight="53.0" prefWidth="241.0" text="Login" textAlignment="CENTER" textFill="#7baeff">
                      <font>
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <JFXComboBox fx:id="cmbUserType" focusColor="BLACK" labelFloat="true" layoutX="33.0" layoutY="71.0" onAction="#cmbUserType_OnAction" prefHeight="28.0" prefWidth="285.0" promptText="USER TYPE" unFocusColor="#00123b">
+                  <JFXComboBox fx:id="cmbUserType" focusColor="#5c73f2" labelFloat="true" layoutX="33.0" layoutY="71.0" onAction="#cmbUserType_OnAction" prefHeight="28.0" prefWidth="285.0" promptText="USER TYPE" style="-fx-background-color: #ffffff;" unFocusColor="#5c73f2">
                      <effect>
                         <ColorAdjust brightness="-0.34" contrast="-0.1" />
                      </effect>
                   </JFXComboBox>
-                  <JFXPasswordField fx:id="password" focusColor="BLACK" labelFloat="true" layoutX="33.0" layoutY="203.0" onAction="#password_OnAction" prefHeight="26.0" prefWidth="285.0" promptText="PASSWORD" unFocusColor="#00123b">
+                  <JFXPasswordField fx:id="password" focusColor="#5c73f2" labelFloat="true" layoutX="33.0" layoutY="203.0" onAction="#password_OnAction" prefHeight="28.0" prefWidth="285.0" promptText="PASSWORD" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
                      <effect>
                         <ColorAdjust brightness="-0.34" />
                      </effect>
                   </JFXPasswordField>
-                  <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="127.0" layoutY="273.0" onAction="#btnLogin_OnAction" prefHeight="28.0" prefWidth="97.0" text="Login" textFill="#000000cf">
+                  <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="127.0" layoutY="273.0" onAction="#btnLogin_OnAction" prefHeight="28.0" prefWidth="97.0" text="Login" textFill="#07080a">
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor></JFXButton>
-                  <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="74.0" layoutY="313.0" onAction="#btnRegister_OnAction" prefHeight="26.0" prefWidth="202.0" style="-fx-background-color: #5C73F2;" text="Register" textFill="#000000cf">
+                  <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="74.0" layoutY="313.0" onAction="#btnRegister_OnAction" prefHeight="26.0" prefWidth="202.0" style="-fx-background-color: #5C73F2;" text="Register">
                      <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                      </cursor></JFXButton>
@@ -65,12 +65,12 @@
                   <Image url="@../icon/man-holding-construction-tool-equipment-003-512.png" />
                </image>
             </ImageView>
-            <Label layoutX="160.0" layoutY="14.0" text="Akash Stainless Steel&#10;" textFill="#230a59">
+            <Label layoutX="160.0" layoutY="14.0" text="Akash Stainless Steel&#10;" textFill="#7baeff">
                <font>
                   <Font size="37.0" />
                </font>
             </Label>
-            <Label layoutX="209.0" layoutY="59.0" text="Management System" textFill="#230a59">
+            <Label layoutX="209.0" layoutY="59.0" text="Management System" textFill="#7baeff">
                <font>
                   <Font size="28.0" />
                </font>

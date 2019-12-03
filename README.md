@@ -45,39 +45,51 @@ Author use following technologies to made this system.
 This system include 21 interfaces designing and If some one want to get some idea about user interface designing of this system they can use this screen shots.
 
 Splash Screen
+
 ![Ait text](project-image/IMG_20191203_025652.JPG)
 
 Login
+
 ![Ait text](project-image/IMG_20191203_041346.JPG)
 
 Main Dash Bord(Admin View)
+
 ![Ait text](project-image/IMG_20191203_030005.JPG)
 
 Select Customer Type
+
 ![Ait text](project-image/IMG_20191203_030134.JPG)
 
 One of Customer View
+
 ![Ait text](project-image/IMG_20191203_025510.JPG)
 
 Select Order Type
+
 ![Ait text](project-image/IMG_20191203_025826.JPG)
 
 Place Order Item Required
+
 ![Ait text](project-image/IMG_20191203_041418.JPG)
 
 Place Order Service Required
+
 ![Ait text](project-image/IMG_20191203_041503.JPG)
 
 Search Details
+
 ![Ait text](project-image/IMG_20191203_025605.JPG)
 
 Register Account to Log
+
 ![Ait text](project-image/IMG_20191203_025748.JPG)
 
 Manage Estimation Employee View
+
 ![Ait text](project-image/IMG_20191203_030209.JPG)
 
 ##License
+
 [LICENSE](LICENSE)
 
 Modified-Stainless-steel-Management-System-Layered-Architecture

@@ -251,7 +251,11 @@ public class PlaceOrderItemController {
         cmbCode.getSelectionModel().clearSelection();
         txtName.clear();
         txtTotal.clear();
-
+        cmbCustomerId.getSelectionModel().clearSelection();
+        txtDescription.clear();
+        txtUnitPrice.clear();
+        txtQuantity.clear();
+        fullTotal=0;
         txtTotal.setText("0.00");
     }
     public void cmbCode_OnAction(ActionEvent actionEvent) {
@@ -407,11 +411,12 @@ public class PlaceOrderItemController {
                         }
 
                         btnAdd.setText("Add");
+                        cmbCode.getSelectionModel().clearSelection();
+                        txtQuantity.clear();
+                        txtDescription.clear();
+                        txtUnitPrice.clear();
                     }
-
                 });
-
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -439,6 +444,8 @@ public class PlaceOrderItemController {
 
             for (int i = 0; i <temp.size() ; i++) {
                 if(temp.get(i).getItemCode().equals(itemCode)){
+                    fullTotal -= temp.get(i).getTotal();
+                    System.out.println(fullTotal);
                     temp.remove(i);
                 }
             }
@@ -486,6 +493,9 @@ public class PlaceOrderItemController {
                 ));
             }
 
+            fullTotal +=total;
+            System.out.println(fullTotal);
+
             btnDelete.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
@@ -511,9 +521,7 @@ public class PlaceOrderItemController {
                         double totDelete = unitPrice1 * deleteQty;
                         fullTotal -= totDelete;
                         txtTotal.setText(fullTotal + "0");
-                        System.out.println(fullTotal);
-                        System.out.println(unitPrice1);
-                        System.out.println(totDelete);
+
                     } catch (Exception e) {
                         e.printStackTrace();
                         Logger.getLogger("lk.ijse.dep.akashStainlessSteel.controller").log(Level.SEVERE, null,e);
@@ -547,12 +555,10 @@ public class PlaceOrderItemController {
                                 holdItem.getDelete()
                         ));
                     }
-
                     btnAdd.setText("Add");
                 }
 
             });
-
             btnAdd.setText("Add");
         }
         btnPlaceOrder.setDisable(false);
@@ -618,6 +624,27 @@ public class PlaceOrderItemController {
         Map<String,Object> params = new HashMap<>();
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, params, DBConnection.getInstance().getConnection());
         JasperViewer.viewReport(jasperPrint,false);*/
+
+        txtOrderId.setDisable(true);
+        lblDate.setDisable(true);
+        cmbCustomerId.setDisable(true);
+        txtName.setDisable(true);
+        cmbCode.setDisable(true);
+        txtDescription.setDisable(true);
+        txtUnitPrice.setDisable(true);
+        txtQuantity.setDisable(true);
+
+        btnAdd.setDisable(true);
+        tblList_Id.setDisable(true);
+        btnPlaceOrder.setDisable(true);
+        txtTotal.setDisable(true);
+
+        cmbCustomerId.getSelectionModel().clearSelection();
+        cmbCode.getSelectionModel().clearSelection();
+        txtQuantity.clear();tblList_Id.getItems().clear();
+        txtTotal.clear();
+        txtName.clear();
+        fullTotal =0;
 
     }
 

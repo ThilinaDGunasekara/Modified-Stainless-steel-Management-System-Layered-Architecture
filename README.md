@@ -1,6 +1,6 @@
 # Stainless Steel Management System 
 
-Introduction
+#Introduction
 
 This application is simple POS(Point Of Sales) system who can use to sore,
         customer details 
@@ -11,7 +11,7 @@ This application is simple POS(Point Of Sales) system who can use to sore,
         
 And also this application was developed by using layered architecture and java SE.
 
-Requirements
+#Requirements
 
 Before use this application you must need to install JAVA runtime environment and MYSQL database management services..
 links :  
@@ -19,11 +19,11 @@ links :
     [MySQL](https://www.mysql.com/)
 
 
-Installation
+#Installation
 
 If you did above installations, You only have to double click the jar file and install the jar file..
 
-Author
+#Author
 
 name  : MLDTDU Gunasekara
 
@@ -32,7 +32,7 @@ e-mail : thilinadhammika86@gmail.com
 [Github](https://github.com/ThilinaDGunasekara) username : ThiinaDGunasekara
 
 
-Built With
+#Built With
 
 Author use following technologies to made this system.
 
@@ -45,7 +45,7 @@ Author use following technologies to made this system.
         Jasper Repors
         Regular Expressions
 
-Some of Screen Shots
+#Some of Screen Shots
 
 This system include 21 interfaces designing and If some one want to get some idea about user interface designing of this system they can use this screen shots.
 
@@ -93,7 +93,7 @@ Manage Estimation Employee View
 
 ![Ait text](project-image/IMG_20191203_030209.JPG)
 
-License
+#License
 
 License Under the [MIT LICENSE](LICENSE)
 

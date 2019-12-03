@@ -1,6 +1,6 @@
 # Stainless Steel Management System 
 
-#Introduction
+## Introduction
 
 This application is simple POS(Point Of Sales) system who can use to sore,
         customer details 
@@ -11,7 +11,7 @@ This application is simple POS(Point Of Sales) system who can use to sore,
         
 And also this application was developed by using layered architecture and java SE.
 
-#Requirements
+## Requirements
 
 Before use this application you must need to install JAVA runtime environment and MYSQL database management services..
 links :  
@@ -19,11 +19,11 @@ links :
     [MySQL](https://www.mysql.com/)
 
 
-#Installation
+## Installation
 
 If you did above installations, You only have to double click the jar file and install the jar file..
 
-#Author
+## Author
 
 name  : MLDTDU Gunasekara
 
@@ -32,7 +32,7 @@ e-mail : thilinadhammika86@gmail.com
 [Github](https://github.com/ThilinaDGunasekara) username : ThiinaDGunasekara
 
 
-#Built With
+## Built With
 
 Author use following technologies to made this system.
 
@@ -45,55 +45,55 @@ Author use following technologies to made this system.
         Jasper Repors
         Regular Expressions
 
-#Some of Screen Shots
+## Some of Screen Shots
 
 This system include 21 interfaces designing and If some one want to get some idea about user interface designing of this system they can use this screen shots.
 
-Splash Screen
+##### Splash Screen
 
 ![Ait text](project-image/IMG_20191203_025652.JPG)
 
-Login
+##### Login
 
 ![Ait text](project-image/IMG_20191203_041346.JPG)
 
-Main Dash Bord(Admin View)
+##### Main Dash Bord(Admin View)
 
 ![Ait text](project-image/IMG_20191203_030005.JPG)
 
-Select Customer Type
+##### Select Customer Type
 
 ![Ait text](project-image/IMG_20191203_030134.JPG)
 
-One of Customer View
+##### One of Customer View
 
 ![Ait text](project-image/IMG_20191203_025510.JPG)
 
-Select Order Type
+##### Select Order Type
 
 ![Ait text](project-image/IMG_20191203_025826.JPG)
 
-Place Order Item Required
+##### Place Order Item Required
 
 ![Ait text](project-image/IMG_20191203_041418.JPG)
 
-Place Order Service Required
+##### Place Order Service Required
 
 ![Ait text](project-image/IMG_20191203_041503.JPG)
 
-Search Details
+##### Search Details
 
 ![Ait text](project-image/IMG_20191203_025605.JPG)
 
-Register Account to Log
+##### Register Account to Log
 
 ![Ait text](project-image/IMG_20191203_025748.JPG)
 
-Manage Estimation Employee View
+##### Manage Estimation Employee View
 
 ![Ait text](project-image/IMG_20191203_030209.JPG)
 
-#License
+## License
 
 License Under the [MIT LICENSE](LICENSE)
 

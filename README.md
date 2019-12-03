@@ -95,6 +95,6 @@ Manage Estimation Employee View
 
 #License
 
-[LICENSE](LICENSE)
+License Under the [MIT LICENSE](LICENSE)
 
 Modified-Stainless-steel-Management-System-Layered-Architecture
